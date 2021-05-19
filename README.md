@@ -1,3 +1,3 @@
-# Ignite - <img src="public/favicon.png" width="18px"> DT Money Finance
+# Ignite - <img src="public/favicon.png" width="22px"> DT Money Finances
 
 <img src=".github/computer.png">
