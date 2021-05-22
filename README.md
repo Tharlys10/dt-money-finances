@@ -6,13 +6,13 @@
 
 ## Start Project
 
-<img align="right" src=".github/computer.png" width="250">
+<img align="right" src=".github/computer.png" width="225">
 
 <b>Install dependencies</b><br/>
-yarn ou npm i
+yarn or npm i
 
 <b>Start</b><br/>
-yarn start ou npm run start
+yarn start or npm run start
 
 
 
