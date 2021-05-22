@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
-  background: var(--blue);
+interface HeaderProps {
+  mode: 'light' | 'dark'
+}
+
+export const Container = styled.header<HeaderProps>`
+  background: ${(props) => props.mode === 'light' ? 'var(--blue)' : '#000'};
 `;
 
 export const Content = styled.div`
@@ -27,5 +31,21 @@ export const Content = styled.div`
     &:hover {
       filter: brightness(0.9);
     }
+  }
+  
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1.5rem 3rem 0rem 0rem;
+
+  button {
+    background: transparent;
+    border: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

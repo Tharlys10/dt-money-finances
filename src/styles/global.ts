@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+interface GlobalCssProps {
+  mode: 'light' | 'dark'
+}
+
+export const GlobalStyle = createGlobalStyle<GlobalCssProps>`
   :root {
     --red: #E62E4D;
     --blue: #5429CC;
@@ -12,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     --text-body: #969CB3;
 
     --background: #F0F2F5;
-    --background-dark: #000000;
+    --background-dark: #161B22;
     --shape: #FFFFFF;
   }
 
@@ -35,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--background);
+    background: ${(props) => props.mode === 'light' ? 'var(--background)' : 'var(--background-dark)'};
     -webkit-font-smoothing: antialiased;
   }
 
